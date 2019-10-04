@@ -1,0 +1,40 @@
+.home-button {
+  display: inline-block;
+  padding: 20px;
+  background-color: #d1c2c2;
+  font: normal small-caps normal 28px/1.5 "playfair display", serif; /*style caps varient size/line-height font*/
+  font-weight: 500;
+  border: none;
+  width: 300px;
+  margin-top: 5%;
+  margin-left: 10px;
+  background-color: #ffc299;
+}
+
+.login-button,
+.addproduct-button {
+  background-color: rgb(124, 235, 201);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 10px auto;
+  font-size: 20px;
+}
+
+.login-button:hover,
+.home-button:hover,
+.addproduct-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.addproduct-button {
+  /* display: block;
+  width: 100%;
+  margin: 5% 5%; */
+  background-color: rgb(81, 161, 226);
+}
+.cancel {
+  background-color: rgb(226, 119, 119);
+}

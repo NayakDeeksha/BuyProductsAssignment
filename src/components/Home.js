@@ -2,65 +2,65 @@ import React, { Component } from "react";
 import Button from "./Button";
 import "../style/Home.css";
 import LoginForm from "./LoginForm";
+import { Link } from "react-router-dom";
+
 class Home extends Component {
-  state = { showPopup: false, login: false };
+  state = { showPopup: false };
 
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup
     });
   }
-  setLogin() {
-    this.setState({
-      login: !this.state.login
-    });
-  }
-  handleAddProducts() {
-    console.log("add");
-  }
-  handleBuyProducts() {
-    console.log("buy");
-  }
 
   render() {
     return (
-      <div id="container">
+      <div id="home-container">
         <div className="container-left"></div>
         <div className="container-right">
+          <Link to="/orders">
+            <Button
+              text="ORDERS"
+              // onClick={<Orders />}
+              type="button"
+              classname="home-button"
+            />
+          </Link>
           <p>Buy,</p>
           <p>Sell</p>
           <p>And Find</p>
           <p>Just About</p>
           <p>Anything</p>
-          {this.state.login ? (
-            <div>
-              <Button
-                text="ADD PRODUCTS"
-                onClick={this.handleAddProducts.bind(this)}
-                type="submit"
-                id="add"
-              />
-              <Button
-                text="BUY PRODUCTS"
-                onClick={this.handleBuyProducts.bind(this)}
-                type="submit"
-                id="buy"
-              />
-            </div>
-          ) : (
+          {document.cookie.indexOf("username") === -1 ? (
             <Button
               text="LOGIN"
               onClick={this.togglePopup.bind(this)}
               type="submit"
-              id="login"
+              classname="home-button"
             ></Button>
+          ) : (
+            <div>
+              <Link to="/addProduct">
+                <Button
+                  text="ADD PRODUCTS"
+                  // onClick={<AddProduct />}
+                  type="submit"
+                  classname="home-button"
+                />
+              </Link>
+              <Link to="/buyProduct">
+                <Button
+                  text="BUY PRODUCTS"
+                  // onClick={<BuyProduct />}
+                  type="submit"
+                  classname="home-button"
+                />
+              </Link>
+            </div>
           )}
         </div>
         {this.state.showPopup ? (
-          <LoginForm
-            closePopup={this.togglePopup.bind(this)}
-            setLoginstate={this.setLogin.bind(this)}
-          />
+          <LoginForm closePopup={this.togglePopup.bind(this)} />
         ) : null}
       </div>
     );

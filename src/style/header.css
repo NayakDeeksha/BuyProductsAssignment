@@ -1,0 +1,11 @@
+.form-header {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: rgb(81, 161, 226);
+  box-sizing: border-box;
+  opacity: 0.6;
+  font-size: 40px;
+  color: white;
+}

@@ -1,4 +1,4 @@
-#container {
+#home-container {
   display: flex;
   justify-content: center;
 }
@@ -15,26 +15,8 @@
   background-color: #c1f0f0;
   text-align: left;
   padding-left: 5%;
-  padding-top: 8%;
-  font: normal small-caps normal 68px/1.5 "playfair display", serif; /*style caps varient size/line-height font*/
+  font: normal small-caps normal 68px/0.5 "playfair display", serif; /*style caps varient size/line-height font*/
   font-weight: 500;
   color: #292f2f;
   box-sizing: border-box;
-}
-
-#login,
-#add,
-#buy {
-  display: block;
-  padding: 20px;
-  background-color: #d1c2c2;
-  font: normal small-caps normal 28px/1.5 "playfair display", serif; /*style caps varient size/line-height font*/
-  font-weight: 500;
-  border: none;
-  width: 300px;
-  margin-top: 5%;
-  background-color: #ffc299;
-}
-#login:hover {
-  opacity: 0.6;
 }
